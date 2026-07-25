@@ -1,0 +1,12 @@
+name: bitchat-tui
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - textual==8.2.8
+      - aiohttp==3.14.3
+      - aiohttp-socks==0.11.0
+      - coincurve==21.0.0
+      - cryptography==49.0.0
