@@ -72,6 +72,24 @@ To rebuild it after code changes, run:
 `build/`. `bitchat-tui.spec` records the build config; `dist/` holds the output; add both
 `build/` and `dist/` to VCS ignores if this becomes a git repo.)
 
+### .deb package
+
+```
+./scripts/build_deb.sh
+```
+
+Wraps the binary above into `dist/bitchat-tui_<version>_amd64.deb` (installs to
+`/usr/bin/bitchat-tui`). Run `scripts/build_binary.sh` first. Install with:
+
+```
+sudo apt install ./dist/bitchat-tui_0.1.0_amd64.deb
+```
+
+### Windows .exe
+
+Built by CI (`.github/workflows/release.yml`) on `windows-latest` for every `v*` tag and
+attached to the matching GitHub release, since PyInstaller doesn't cross-compile from Linux.
+
 ## Interface
 
 - **Autocomplete**: press **→** or **End** to accept an inline ghosted suggestion while
